@@ -52,9 +52,10 @@ jobs:
         
     - name: Clone source code
       run: |       
-        git clone https://github.com/likanchen97/asuswrt-merlin.ng
-        git clone https://github.com/likanchen97/k3screenctrl asuswrt-merlin.ng/release/src/router/k3screenctrl 
-        git clone https://github.com/likanchen97/am-toolchains
+        git clone https://github.com/RMerl/asuswrt-merlin
+        git clone https://github.com/ghostnup/asuswrt-merlin.ng
+        git clone https://github.com/ghostnup/k3screenctrl asuswrt-merlin.ng/release/src/router/k3screenctrl 
+        git clone https://github.com/RMerl/am-toolchains
                 
         sudo mkdir -p /media/asuswrt/
         sudo mkdir -p /opt/images/
@@ -114,7 +115,7 @@ jobs:
         tag: build_${{ env.MERLIN_VERSION }}
         body: |
           this is only a latest build from master
-          version: https://github.com/likanchen97/asuswrt-merlin.ng/commit/${{ env.MERLIN_VERSION }}
+          version: https://github.com/ghostnup/asuswrt-merlin.ng/commit/${{ env.MERLIN_VERSION }}
         token: ${{ secrets.GITHUB_TOKEN }}
         draft: false
         prerelease: false
