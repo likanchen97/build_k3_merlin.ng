@@ -25,6 +25,9 @@ jobs:
       # Runs a single command using the runners shell
     - name: Update && install packages
       run: |
+        sudo apt update
+        sudo apt upgrade -y
+        
         sudo apt-get install -y libncurses5 libncurses5-dev m4 bison gawk flex libstdc++6-4.7-dev g++-4.7 g++ \
         gengetopt git gitk zlib1g-dev autoconf autopoint libtool-bin shtool autogen \
         mtd-utils intltool sharutils docbook-xsl-* libstdc++5 texinfo dos2unix xsltproc \
